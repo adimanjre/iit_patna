@@ -1,0 +1,35 @@
+.name{
+    color: #000;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+}
+.text{
+    color: #AFAFAF;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+}
+.decline{
+    color: #EF3434;
+font-size: 16px;
+font-style: normal;
+}
+.assign{
+background: #78C4C8;
+color: #FFF;
+font-size: 16px;
+font-style: normal;
+}
+.heading{
+    color: #1E1E1E;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+}
+.heading2{
+    color: #1E1E1E;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+}
