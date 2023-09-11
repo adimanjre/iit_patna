@@ -7,12 +7,19 @@ import eyeOn from '@/public/eye-on.png'
 import eyeOff from '@/public/eye-off.png'
 import { useState, useEffect } from 'react'
 import logo from '@/public/logo.png'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+  const [loginData,setLoginData] = useState({
+    email:"",password:""
+  })
   const [viewPassword, setViewPassword] = useState(false)
-
+  const router = useRouter()
   async function handleSubmit(e){
     e.preventDefault();
+    if(loginData.email == "test@gmail.com" && loginData.password == "test"){
+      router.push('/dashboard')
+    }
   }
 
   return (
@@ -31,6 +38,7 @@ export default function Home() {
               <input 
               type='text' 
               placeholder='Email Address'
+              onChange={(e)=>setLoginData({...loginData,email:e.target.value})}
               className={`${style.formInput} w-full`}
               />
               </div>
@@ -38,6 +46,7 @@ export default function Home() {
               <input 
               type={!viewPassword?'password':'text'} 
               placeholder='Password'
+              onChange={(e)=>setLoginData({...loginData,password:e.target.value})}
               className={`${style.formInput} w-full`}
               >
               </input>
