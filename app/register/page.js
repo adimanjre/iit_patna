@@ -80,11 +80,11 @@ export default function Home() {
               className={`${style.loginButton} mt-10 w-full`}
               onClick={(e)=>handleSubmit(e)}
               >
-                Sign In
+                Sign Up
               </button>
               <div className='mt-4'>
-              <Link href="/register" className={`${style.btmLink}`}>
-              Already have an account? <span className={`${style.link}`}>Sign Up</span>
+              <Link href="/" className={`${style.btmLink}`}>
+              Already have an account? <span className={`${style.link}`}>Sign In</span>
               </Link>
               </div>
             </form>

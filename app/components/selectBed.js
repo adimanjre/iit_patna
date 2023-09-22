@@ -14,7 +14,7 @@ const selectBed = ({form,setForm,setCurrentForm}) => {
    }
   return (
     <>
-    <h1 className={`${style.heading}`}>Please select a wing</h1>
+    <h1 className={`${style.heading}`}>Please select a Bed</h1>
     <div className="flex gap-5 mt-5">
         <AssignCard image={openBed} name="bed no - 1.1" form={form} setForm={setForm} handleChecked={handleChecked4}/>
       <AssignCard image={closeBed} name="bed no - 1.2" form={form} setForm={setForm} handleChecked={handleChecked4}/>

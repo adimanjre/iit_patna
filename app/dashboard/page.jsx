@@ -1,8 +1,11 @@
+"use client"
+
 import Nav from '@/app/components/navbar'
 import Notifications from '@/app/components/notification'
 import style from './page.module.css'
 import LineChart from '@/app/components/lineChart'
 import BarChart from '@/app/components/barChart'
+import AssignCard from '@/app/components/assignRoomCard'
 
 export default function Dashboard(){
     return(
@@ -15,6 +18,14 @@ export default function Dashboard(){
                 <Notifications/>
                 <Notifications/>
                 <Notifications/>
+                {
+                   localStorage.getItem('assign') && 
+                   <>
+                    <h1 className={`${style.heading} mb-4 pt-4 mt-4`}>Assigned rooms</h1>
+            <AssignCard/>
+                   </>
+                  
+                }
             </div>
             <div className='grid gap-4'>
                 <div className={`${style.container} border-stone-300  border rounded-xl p-5`}>
